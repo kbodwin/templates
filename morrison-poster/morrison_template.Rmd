@@ -1,0 +1,88 @@
+---
+title: "An HTML poster example"
+author: "Kelly Bodwin"
+date: "`r Sys.Date()`"
+output:
+  pagedown::poster_relaxed:
+    pandoc_args: --mathjax
+    css: "poster-morrison.css"
+
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, out.width='100%') 
+
+library(tidyverse)
+data(iris)
+
+```
+
+
+Main message
+===============================================================================
+The [takeaway message]{.emph} of an academic poster should be [large]{.emph}, in [plain English]{.emph} with important words [emphasized]{.emph}.
+
+<div position='absolute' bottom=0>
+![](./qr_morrison.jpg){width=50%}
+</div>
+
+Title
+===============================================================================
+A Paper
+By a person
+
+
+
+Methods
+===============================================================================
+
+## Introduction
+
+Having text on a poster is great!  Surely everyone will read it carefully.
+
+## Methods
+
+Lorem ipsum dolor sit amet, dolore graece perfecto ex ius, mea dicit audire ut, est no error honestatis comprehensam. Eros augue verterem pri cu, ius nullam noluisse eu. Veri fabulas eam cu, ad eruditi mandamus intellegat his. Est ut ullum recusabo, eam diam doming mediocrem cu, habeo mundi ad mea. Pri ad melius nusquam scaevola. Cu eruditi efficiendi nam, nullam laboramus concludaturque no qui. Sit et elit meis minimum, no sed erat lobortis interesset.
+
+Ad has homero soleat. Nostro diceret verterem ne est, sea duis deserunt et, ad vix modo eligendi. Sea munere labore te. Ne partem incorrupte vim. Vel eu duis vivendum, mentitum perpetua persequeris eum ne.
+
+Ea qui accumsan deseruisse, libris labore prodesset usu ut, sed at iudico integre sanctus. Ne ius ubique minimum, case aeque iudicabit mei ne. Eu his aperiri similique conclusionemque, pri ne audire denique dignissim, cum quodsi apeirian ea. No vim luptatum praesent torquatos, eam in quem verear accusam, no sea tollit pericula. Id has sale solum commune. Homero aliquip pri et, ex iudico postea viderer has, aperiam democritum ea cum.
+
+Esse docendi albucius in mel, homero tamquam fabellas ad vim. Alienum posidonium pri ea. An ius mutat harum laudem, nec ei ludus perpetua repudiandae, eos at vidit autem. Omnium epicuri noluisse an mea, vix ea elit vivendo definitiones. Te facilis platonem sea, mundi munere in vix. Duo dictas everti theophrastus ad, pro an ludus iracundia.
+
+Vel eu aeque soluta denique, vix te dico invenire patrioque. Putant aperiri quaeque te vis, ea mea omnes nonumy consulatu. Populo sensibus hendrerit nec eu, ex nec esse mundi alterum. Sed erant simul petentium in, ut vim agam lucilius. Ut duo aliquip sanctus tractatos, quo altera assueverit ne.
+
+
+Results
+================================================================================
+
+## Discussion
+
+Everybody cares deeply about the `iris` dataset.  It is impossible to have too many `iris` plots.  Nothing is more exciting than petal lengths, with the possible exception of sepal lengths.
+
+## Plots
+```{r, out.width='100%'}
+
+ggplot(iris, aes(x = Species, y = Sepal.Width, fill = Species)) + geom_boxplot() + ggtitle("Omg iris species are different!")
+
+```
+
+Who doesn't love a good ANOVA table?
+
+```{r}
+
+summary(aov(lm(Sepal.Width ~ Species, data = iris)))
+
+```
+
+Discussion:  It goes off the page and I honestly can't be bothered to fix that for purposes of a template.
+
+Scatterplots:
+
+```{r}
+
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) + geom_point() + geom_smooth(method = "lm") + ggtitle("Species have different sepals shapes!")
+
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) + geom_point() + geom_smooth(method = "lm") + ggtitle("Species have different petal shapes!")
+
+```

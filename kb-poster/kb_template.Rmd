@@ -1,0 +1,52 @@
+---
+title: "An HTML poster example"
+author: "Kelly Bodwin"
+date: "`r Sys.Date()`"
+output:
+  pagedown::poster_relaxed:
+    pandoc_args: --mathjax
+    css: "poster-morrison.css"
+    #qr: https://www.twitter.com/kellybodwin
+
+---
+
+
+Main message
+===============================================================================
+The [takeaway message]{.emph} of an academic poster should be [large]{.emph}, in [plain English]{.emph} with important words [emphasized]{.emph}.
+
+
+
+```{r, echo = FALSE, message = FALSE, out.width='100%'}
+library(tidyverse)
+data(iris)
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) + geom_point() + geom_smooth(method = "lm") + ggtitle("Everybody loves the Iris dataset!")
+```
+
+Methods
+===============================================================================
+
+
+## Introduction
+
+I guess if you really want text you can put it here.
+
+## Part One
+
+Just use whatever markdown formatting you want.
+
+
+Results
+================================================================================
+
+## Discussion
+
+Yeah here's some extra space I guess.
+
+QR Placeholder
+================================================================================
+um
+
+Title and Author
+================================================================================
+it's a paper
