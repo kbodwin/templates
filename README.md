@@ -4,7 +4,7 @@ I love [{pagedown}](https://github.com/rstudio/pagedown) but the templates are p
 
 ## poster-morrison:  
 
-This is a pagedown template and css for Mike Morrison's "better poster" style.  LaTeX templates can be found [here](https://osf.io/ef53g/).  
+This is a pagedown template and css for Mike Morrison's "better poster" style.  Powerpoint template can be found [here](https://osf.io/ef53g/) and LaTeX template can be found [here](https://www.overleaf.com/latex/templates/better-poster-latex-template/gmkgjvxqbyyt).
 
 I created it with the very clunky strategy of editing the css for the {pagedown} "relaxed" poster template, and feeding the custom css to the frontmatter.  Undoubtedly, there are a lot of lingering options in the css that are not necessary, but that I was too afraid to delete.
 
