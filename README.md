@@ -8,7 +8,7 @@ This is a pagedown template and css for Mike Morrison's "better poster" style.  
 
 I created it with the very clunky strategy of editing the css for the {pagedown} "relaxed" poster template, and feeding the custom css to the frontmatter.  Undoubtedly, there are a lot of lingering options in the css that are not necessary, but that I was too afraid to delete.
 
-## poster-kb
+## poster-kb  (still fiddling with this one, don't use it!)
 
 I love the ideas behind Morrison's poster style, but there are a couple things I don't like.  (See e.g. [this critique](http://betterposters.blogspot.com/2019/04/critique-morrison-billboard-poster.html) )
 
