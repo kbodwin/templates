@@ -91,14 +91,14 @@ body {
   font-family: "Paytone One";
   width: 100%;
   height: auto;
-  background-color: #006400;
+  background-color: #004D40;
   margin-top: 0in;
   color: #cce7f1dd;
   padding: 2.3em;
 }
 
 .section-1 p{
-  font-size: 3vw;
+  font-size: 500%;
   padding: 1em;
 }
 
